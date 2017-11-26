@@ -1,61 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 13.11.2017
-  Time: 15:34
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="util" uri="http://mimimi.com" %>
 
 <html>
 <head>
-    <fmt:setLocale value="${pageContext.request.getParameter('language').toLowerCase()}"/>
-    <fmt:setBundle basename="_language"/>
+    <fmt:setLocale value="${util:getLanguage(pageContext.request, pageContext.response)}"/>
+    <fmt:setBundle basename="language"/>
+    <link href="styles/header.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body onload="init('${util:getUserName(pageContext.request)}', ${util:countCart(pageContext.request)})">
 <div id="header">
     <div id="line">
-        <a id="title_href" href="http://localhost:8080/LR2" style="text-decoration: none">
+        <a id="title_href" href="LR2" style="text-decoration: none">
             <h1 align="center" style="font-style: normal; font-size: 60px"> Mimimishka</h1>
         </a>
     </div>
     <br>
     <div id="language" style="float: right; margin-right: 10px">
-        <img id="RU" class="languages" src="rus.jpg" width="50" height="25" onclick="setLanguage('RU')">
-        <img id="EN" class="languages" src="en.png" width="50" height="25" onclick="setLanguage('EN')">
-        <img id="DE" class="languages" src="de.jpg" width="50" height="25" onclick="setLanguage('DE')">
+        <img id="RU" class="languages" src="images/rus.jpg" width="50" height="25" onclick="setLanguage('RU')">
+        <img id="EN" class="languages" src="images/en.png" width="50" height="25" onclick="setLanguage('EN')">
+        <img id="DE" class="languages" src="images/de.jpg" width="50" height="25" onclick="setLanguage('DE')">
     </div>
 
-    <button id="enter" class="button_style")>
-        <fmt:message key="enter"/>
+    <button id="enter" class="button_style" onclick="location.href='Profile'">
+        <div id="loggedIn" style="display: none"><fmt:message
+                key="hello"/> ${util:getUserName(pageContext.request)} </div>
+        <div id="loggedOut" style="display: none"><fmt:message key="signin"/></div>
     </button>
-    <button id="basket" class="button_style" onclick="forwardBasket(); return false;">
+    <button id="singout" class="button_style" onclick="logout()">
+        <fmt:message key="signout"/>
+    </button>
+    <button id="basket" class="button_style" onclick="location.href='Basket'">
         <fmt:message key="basket"/>
     </button>
-    <button id="history" class="button_style">
-        <fmt:message key="history"/>
+    <button id="checkout" class="button_style" onclick="location.href='Checkout'">
+        <fmt:message key="checkout"/>
     </button>
 
-    <%--<div style="clear: both"></div>--%>
-
-    <div id="filter" style="float: right; margin-right: 100px; margin-top: -20px">
-        <h2 id="filter_title" align="center" style="color: rgb(215, 0, 70);">
-            Фильтр
-        </h2>
-        <select id="filter_select" style="margin-top: -18px" onchange="setFilter()" >
-            <option id="All" value="All">
-                Все игрушки
-            </option>
-            <option id="Racoon" value="Racoon">
-                Енот
-            </option>
-            <option id="Bear" value="Bear">
-                Медведь
-            </option>
-        </select>
-    </div>
 </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="scripts/header.js"></script>
 </body>
 </html>

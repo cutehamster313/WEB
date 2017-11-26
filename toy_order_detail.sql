@@ -1,0 +1,9 @@
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (6, 1, 5, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (7, 3, 5, 3);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (9, 1, 8, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (10, 3, 8, 3);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (12, 1, 11, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (14, 1, 13, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (16, 1, 15, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (18, 1, 17, 1);
+INSERT INTO toy.order_detail (detail_id, quanity, details_order_id, details_toy_id) VALUES (20, 1, 19, 1);

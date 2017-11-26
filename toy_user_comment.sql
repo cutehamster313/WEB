@@ -1,0 +1,3 @@
+INSERT INTO toy.user_comment (comment_id, comment_date, text, user_login) VALUES (1, '2017-11-26T16:24:09.961+03:00', 'kjbbkjb', 'user');
+INSERT INTO toy.user_comment (comment_id, comment_date, text, user_login) VALUES (21, '2017-11-26T16:45:43.269+03:00', 'sdfsdfsdf', 'user');
+INSERT INTO toy.user_comment (comment_id, comment_date, text, user_login) VALUES (22, '2017-11-26T16:45:53.071+03:00', 'Приветули', 'user');

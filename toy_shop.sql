@@ -1,0 +1,2 @@
+INSERT INTO toy.shop (shop_id, coordinate_x, coordinate_y, shop_name) VALUES (1, 59.867, 30.35, '1)Поля, поменяй координаты и название');
+INSERT INTO toy.shop (shop_id, coordinate_x, coordinate_y, shop_name) VALUES (2, 59.987, 30.353, '2)Поля, поменяй название и координаты');

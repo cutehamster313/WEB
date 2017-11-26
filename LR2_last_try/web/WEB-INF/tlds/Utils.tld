@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myshortname</short-name>
+    <uri>http://mimimi.com</uri>
+    <function>
+        <name>getLanguage</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>java.lang.String
+            getLanguageCookie(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+        </function-signature>
+    </function>
+    <function>
+        <name>getToysForCategory</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>java.util.List
+            getToysForCategory(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+        </function-signature>
+    </function>
+    <function>
+        <name>getUserName</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>java.lang.String getUserName(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    <function>
+        <name>getToy</name>
+        <function-class>utils.DatabaseUtils</function-class>
+        <function-signature>entities.Toy getToy(long)</function-signature>
+    </function>
+    <function>
+        <name>getShops</name>
+        <function-class>utils.DatabaseUtils</function-class>
+        <function-signature>java.util.List getShops()</function-signature>
+    </function>
+    <function>
+        <name>getComments</name>
+        <function-class>utils.DatabaseUtils</function-class>
+        <function-signature>java.util.List getCommentOfUser(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    <function>
+        <name>getOrders</name>
+        <function-class>utils.DatabaseUtils</function-class>
+        <function-signature>java.util.List getOrdersOfUser(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    <function>
+        <name>formatDate</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>java.lang.String getDateForUser(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getCategory</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>java.lang.String
+            getToyCategoryCookie(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+        </function-signature>
+    </function>
+    <function>
+        <name>checkCart</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>boolean checkCart(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    <function>
+        <name>getToyByString</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>entities.Toy getToy(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>countCart</name>
+        <function-class>utils.CommonUtils</function-class>
+        <function-signature>int countCart(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+
+
+</taglib>
